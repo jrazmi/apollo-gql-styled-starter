@@ -1,0 +1,108 @@
+ {
+    "header": {
+        "title": {
+            "content": "Register",
+            "uppercase": true,
+            "color": "primary"
+        }
+    },
+    "button": {
+        "color": "secondary",
+        "staticName": "Register",
+        "submittingName": "Registering"
+    },
+    "rows": [
+    {
+        "legend": {
+            "content": "Contact Info",
+            "uppercase": true,
+            "color": "tertiary"
+        },
+        "row": "row justify-content-center",
+        "fields": [
+            {
+                "col": "col-md-6",
+                "type": "text",
+                "name": "firstName",
+                "validation": {"required": "First Name Required"},
+                "label": "First Name",
+                "placeholder": "First Name"
+            },
+            {
+                "col": "col-md-6",
+                "type": "text",
+                "name": "lastName",
+                "validation": {"required": "Last Name Required"},
+                "label": "Last Name",
+                "placeholder": "Last Name"
+            },
+            {
+                "col": "col-md-12",
+                "type": "email",
+                "name": "email",
+                "validation": {
+                        "required": "Email Required",
+                        "custom": [{"name": "ValidEmail"}]
+                    },
+                "label": "Email Address",
+                "placeholder": "Email Address"
+            },
+            {
+                "col": "col-md-12",
+                "type": "email",
+                "name": "confirmEmail",
+                "validation": {
+                        "required": "Email Required",
+                        "custom": [{"name": "ValidEmail"}, {"name": "MatchesInputValue", "input": "email"}]
+                    },
+                "label": "Confirm Email Address",
+                "placeholder": "Confirm Email Address"
+            },
+            {
+                "col": "col-md-12",
+                "type": "tel",
+                "name": "telephone",
+                "validation": {
+                        "required": "Telephone Required",
+                        "custom": [{"name": "ValidTelephone"}]
+                    },
+                "label": "Phone Number",
+                "placeholder": "555-555-5555"
+            }
+
+        ]
+    },
+    {
+        "legend": {
+            "content": "Security",
+            "uppercase": true,
+            "color": "tertiary"
+        },
+        "row": "row justify-content-center",
+        "fields": [
+                        {
+                "col": "col-md-12",
+                "type": "password",
+                "name": "password",
+                "validation": {
+                        "required": "Password Required",
+                        "custom": [{"name": "ValidPassword"}]
+                    },
+                "label": "Password",
+                "placeholder": "Password"
+            },
+            {
+                "col": "col-md-12",
+                "type": "password",
+                "name": "confirmPassword",
+                "validation": {
+                        "required": "Password Required",
+                        "custom": [{"name": "ValidPassword"}, {"name": "MatchesInputValue", "input": "password"}]
+                    },
+                "label": "Confirm Password",
+                "placeholder": "Confirm Password"
+            }
+        ]
+    }
+]
+}
